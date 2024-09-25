@@ -1,22 +1,24 @@
 import pytest
 # TODO: add necessary import
+import pandas as pd
 
 # TODO: implement the first test. Change the function name and input as needed
-def test_one():
+def check_age_restriction(data):
     """
-    # add description for the first test
+    #  Check that no one under the age of 16 is in the census data.
     """
     # Your code here
-    pass
+         
+    return all(data['age'] >= 16)
 
 
 # TODO: implement the second test. Change the function name and input as needed
-def test_two():
+def test_dtat_shape():
     """
-    # add description for the second test
+    # check for null values in data
     """
     # Your code here
-    pass
+    assert data.shape==data.dropna().shape
 
 
 # TODO: implement the third test. Change the function name and input as needed
